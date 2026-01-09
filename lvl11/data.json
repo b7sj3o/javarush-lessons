@@ -1,0 +1,43 @@
+{
+  "electronics": {
+    "laptops": {
+      "prod_001": {
+        "name": "Laptop Model X",
+        "brand": "TechCorp",
+        "specs": {
+          "cpu": "Core i7",
+          "ram_gb": 16,
+          "storage_gb": 512,
+          "os": "Windows 11"
+        },
+        "price": 1200.00,
+        "in_stock": true
+      },
+      "prod_002": {
+        "name": "Laptop Model Y",
+        "brand": "Innovate",
+        "specs": {
+          "cpu": "Ryzen 5",
+          "ram_gb": 8,
+          "storage_gb": 256,
+          "os": "macOS"
+        },
+        "price": 999.00,
+        "in_stock": false
+      }
+    },
+    "smartphones": {
+      "prod_003": {
+        "name": "Phone Z",
+        "brand": "TechCorp",
+        "specs": {
+          "screen": "6.1 inch",
+          "camera_mp": 48,
+          "storage_gb": 128
+        },
+        "price": 700.00,
+        "in_stock": true
+      }
+    }
+  }
+}
