@@ -185,22 +185,43 @@ def timer(func):
 #
 # func()
 
-def enforce_types(func):
-    def wrapper(*args, **kwargs):
-        for idx, (k,v) in enumerate(func.__annotations__.items()):
-            # if not type(kwargs[k]) == v:
-            #     raise TypeError(f"{k} must be {v}")
-            if not type(args[idx]) == v:
-                raise TypeError(f"{k} must be {v}")
+# def enforce_types(func):
+#     def wrapper(*args, **kwargs):
+#         for idx, (k,v) in enumerate(func.__annotations__.items()):
+#             # if not type(kwargs[k]) == v:
+#             #     raise TypeError(f"{k} must be {v}")
+#             if not type(args[idx]) == v:
+#                 raise TypeError(f"{k} must be {v}")
+#
+#
+#         return func(*args, **kwargs)
+#     return wrapper
+#
+#
+# @enforce_types
+# def repeat(text: str, n: int):
+#     return text * n
+#
+# repeat("Hi", 3)      # Ок
+# repeat("Hi", "3")
 
+def d1(func):
+    def wrapper_d1():
+        print("d1: перед")
+        func()
+        print("d1: після")
+    return wrapper_d1
 
-        return func(*args, **kwargs)
-    return wrapper
+def d2(func):
+    def wrapper_d2():
+        print("d2: перед")
+        func()
+        print("d2: після")
+    return wrapper_d2
 
+@d1
+@d2
+def hello():
+    print("hello")
 
-@enforce_types
-def repeat(text: str, n: int):
-    return text * n
-
-repeat("Hi", 3)      # Ок
-repeat("Hi", "3")
+hello()
