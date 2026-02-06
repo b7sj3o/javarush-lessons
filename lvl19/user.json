@@ -1,0 +1,15 @@
+{
+    "name": "Bob",
+    "age": 20,
+    "is_alive": true,
+    "achievements": [
+        "ach1",
+        "ach2",
+        "ach3"
+    ],
+    "address": {
+        "ZIP": 12345,
+        "name": "\u041b\u044c\u0432\u0456\u0432"
+    },
+    "extra_data": null
+}
