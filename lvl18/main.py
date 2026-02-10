@@ -58,14 +58,14 @@ def read_file3():
 #     ...
 #     ...
 #
-# mgr = open("message.txt")
-# file = mgr.__enter__()
-# try:
-#     data = file.read()
-#     ...
-#     ...
-# finally:
-#     mgr.__exit__(None, None, None)
+mgr = open("message.txt")
+file = mgr.__enter__()
+try:
+    data = file.read()
+    ...
+    ...
+finally:
+    mgr.__exit__(None, None, None)
 
 class IgnoreError:
     def __enter__(self):

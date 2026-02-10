@@ -43,11 +43,11 @@ data = {
 import requests
 
 
-response = requests.get('https://jsonplaceholder.typicode.com/posts/1?from_price=1000&to_price=5000')
+response = requests.get('https://jsonplaceholder.typicode.com/posts/1')
 
-# print(response.status_code)
-# print(response.reason)
-# print(response.ok)
+print(response.status_code)
+print(response.reason)
+print(response.ok)
 
 
 # print(json.dumps(dict(response.headers), indent=4))
